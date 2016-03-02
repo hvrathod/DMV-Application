@@ -12,6 +12,7 @@ angular.module('myApp.view2', ['ngRoute'])
         $scope.currentQuestion = undefined;
         $scope.myvalue = false;
         $scope.score = 0;
+
         $scope.percentage = 0;
         // 1. load json file
         $http.get('quiz_data.json').then(function (quizData) {
@@ -23,7 +24,7 @@ angular.module('myApp.view2', ['ngRoute'])
             $scope.currentQuestion = $scope.myQuestions[$scope.currentQuestionIndex];
         });
         $scope.nextQuestion = function () {
-
+            //alert();
             $scope.currentQuestionIndex += 1;
             if ($scope.currentQuestionIndex < $scope.myQuestions.length) {
                 $scope.currentQuestion = $scope.myQuestions[$scope.currentQuestionIndex];
