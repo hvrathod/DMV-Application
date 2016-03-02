@@ -1,0 +1,78 @@
+[
+  {
+    "id": 0,
+    "question": "The speed limit for a school zone is _ , unless otherwise posted.",
+    "answers": [
+      {
+        "id": 0,
+        "text": "15mph"
+      },
+      {
+        "id": 1,
+        "text": "25mph"
+      },
+      {
+        "id": 2,
+        "text": "20mph"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 1,
+    "question": "It is illegal for a person under 21 years of age to drive with a btood alcohol concentration (BAC) that is __ or more.",
+    "answers": [
+      {
+        "id": 0,
+        "text": "O.08%"
+      },
+      {
+        "id": 1,
+        "text": "0.01%"
+      },
+      {
+        "id": 2,
+        "text": "0.05%"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "When looking ahead while driving. you should:",
+    "answers": [
+      {
+        "id": 0,
+        "text": "Stare at the middle of the road"
+      },
+      {
+        "id": 1,
+        "text": "look directly in front of your car "
+      },
+      {
+        "id": 2,
+        "text": "Scan from side to side "
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "Check your rearview mirrors:",
+    "answers": [
+      {
+        "id": 0,
+        "text": "Often to see how traffic is moving behind you"
+      },
+      {
+        "id": 1,
+        "text": "Only on a freeway or highway "
+      },
+      {
+        "id": 2,
+        "text": "Only when you are slowing down"
+      }
+    ],
+    "correct": 0
+  }
+]
