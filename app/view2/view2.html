@@ -4,9 +4,9 @@
     </p>
     <br/>
     <p data-ng-repeat="answer in currentQuestion.answers">
-        <input class="answer" type="radio" name="{{currentQuestion.id}}" value="{{answer.text}}">{{answer.text}}
+        <input class="answer" type="radio" name="{{currentQuestion.id}}" value="{{answer.text}}" ng-click="showNextButton($index)">{{answer.text}}
         <br/>
     </p>
     <br/>
-    <input type="button" value="{{buttonName}}" ng-click="nextQuestion()">
+    <input type="button" value="{{buttonName}}" ng-click="nextQuestion()"  ng-show="myvalue" class="ng-cloak">
 </div>
