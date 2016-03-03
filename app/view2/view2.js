@@ -24,33 +24,28 @@ angular.module('myApp.view2', ['ngRoute'])
             $scope.currentQuestion = $scope.myQuestions[$scope.currentQuestionIndex];
         });
         $scope.nextQuestion = function () {
-            //alert();
             $scope.currentQuestionIndex += 1;
             if ($scope.currentQuestionIndex < $scope.myQuestions.length) {
                 $scope.currentQuestion = $scope.myQuestions[$scope.currentQuestionIndex];
                 if ($scope.currentQuestionIndex === $scope.myQuestions.length - 1) {
                     $scope.buttonName = 'Finish';
-                    $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
-
                 }
             } else {
-                alert("your score is"+$scope.score);
+
+                // Calculating Percentage
+                $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
+
+                // Passing Percentage in query String by using $location.search() function
                 $location.path('/view3').search({param:$scope.percentage});
             }
             $scope.myvalue = false;
         };
 
         $scope.showNextButton = function(id){
-           // alert("id"+id);
-           // alert("correct question id"+$scope.myQuestions[$scope.currentQuestionIndex].correct);
+            //fetch id of selected answer and checks with correct answer
             $scope.correctAnswer = $scope.myQuestions[$scope.currentQuestionIndex].correct;
             if(id === $scope.correctAnswer){
-                //alert("correct anwser");
                 $scope.score += 1;
-
-            }
-            else{
-                //alert("incorrect Anwser");
             }
             $scope.myvalue = true;
         };

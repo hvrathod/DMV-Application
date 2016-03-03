@@ -9,8 +9,8 @@ angular.module('myApp.view3', ['ngRoute'])
   });
 }])
 
-.controller('View3Ctrl', '$scope','$routeParams','$location',[function($scope, $routeParams,$location) {
-  $scope.percentage = $location.search().param;
-  //var param1= $routeParams.param;
-  alert("percentage"+$scope.percentage);
+.controller('View3Ctrl', ['$scope','$location',function($scope,$location) {
+  // fetch parameters from query string
+    $scope.percentage = $location.search().param;
+
 }]);
