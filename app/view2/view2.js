@@ -12,7 +12,6 @@ angular.module('myApp.view2', ['ngRoute'])
         $scope.currentQuestion = undefined;
         $scope.myvalue = false;
         $scope.score = 0;
-
         $scope.percentage = 0;
         // 1. load json file
         $http.get('quiz_data.json').then(function (quizData) {
@@ -33,18 +32,16 @@ angular.module('myApp.view2', ['ngRoute'])
             } else {
 
                 // Calculating Percentage
-                $scope.percentage = (($scope.score / $scope.totalQuestions)*100).toFixed(2);
-
+                $scope.percentage = (($scope.score / $scope.totalQuestions) * 100).toFixed(2);
                 // Passing Percentage in query String by using $location.search() function
-                $location.path('/view3').search({param:$scope.percentage});
+                $location.path('/view3').search({param: $scope.percentage});
             }
             $scope.myvalue = false;
         };
-
-        $scope.showNextButton = function(id){
+        $scope.showNextButton = function (id) {
             //fetch id of selected answer and checks with correct answer
             $scope.correctAnswer = $scope.myQuestions[$scope.currentQuestionIndex].correct;
-            if(id === $scope.correctAnswer){
+            if (id === $scope.correctAnswer) {
                 $scope.score += 1;
             }
             $scope.myvalue = true;
